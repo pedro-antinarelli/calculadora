@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/4ad73e6d29.js" crossorigin="anonymous"></script>
+    <title>Desafio - Calculadora</title>
+</head>
+
+<body>
+    <h1>Calculadora</h1>
+    <form class="formulario">
+        <input type="number" placeholder="Digite o primeiro número" id="num1">
+        <input type="number" placeholder="Digite o segundo número" id="num2">
+        <button type="reset">Limpar</button>
+    </form>
+    <div class="buttons">
+        <button onclick="calcular('somar')"><i class="fa-solid fa-plus"></i></button>
+        <button onclick="calcular('subtrair')"><i class="fa-solid fa-minus"></i></button>
+        <button onclick="calcular('multiplicar')"><i class="fa-sharp fa-solid fa-xmark"></i></button>
+        <button onclick="calcular('dividir')"><i class="fa-solid fa-divide"></i></button>
+        <button onclick="calcular('potencia')"><i class="fa-solid fa-superscript"></i></button>
+        <button onclick="calcular('raiz')">Raiz²</i></button>
+    </div>
+    <p id="resultado"></p>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
