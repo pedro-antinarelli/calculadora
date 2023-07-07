@@ -1,22 +1,25 @@
-const operacoes = {
-    somar: function (num1, num2) {
-        return num1 + num2;
-    },
-    subtrair: function (num1, num2) {
-        return num1 - num2;
-    },
-    multiplicar: function (num1, num2) {
-        return num1 * num2;
-    },
-    dividir: function (num1, num2) {
-        return num1 / num2;
-    },
-    potencia: function (num1, num2) {
-        return Math.pow(num1, num2);
-    },
-    raiz: function (num1) {
-        return Math.sqrt(num1);
-    }
+function somar(num1, num2) {
+    return num1 + num2;
+}
+
+function subtrair(num1, num2) {
+    return num1 - num2;
+}
+
+function multiplicar(num1, num2) {
+    return num1 * num2;
+}
+
+function dividir(num1, num2) {
+    return num1 / num2;
+}
+
+function potencia(num1, num2) {
+    return Math.pow(num1, num2);
+}
+
+function raiz(num1) {
+    return Math.sqrt(num1);
 }
 
 function calcular(operacao) {
@@ -24,10 +27,18 @@ function calcular(operacao) {
     var num2 = parseFloat(document.getElementById("num2").value);
     var resultado;
 
-    if (operacoes.hasOwnProperty(operacao)) {
-        resultado = operacoes[operacao](num1, num2);
-    } else {
-        console.log("Operação inválida");
+    if (operacao === "somar") {
+        resultado = somar(num1, num2);
+    } else if (operacao === "subtrair") {
+        resultado = subtrair(num1, num2);
+    } else if (operacao === "multiplicar") {
+        resultado = multiplicar(num1, num2);
+    } else if (operacao === "dividir") {
+        resultado = dividir(num1, num2);
+    } else if (operacao === "potencia") {
+        resultado = potencia(num1, num2);
+    } else if (operacao === "raiz") {
+        resultado = raiz(num1);
     }
     document.getElementById("resultado").innerText = "Resultado: " + resultado;
 }
